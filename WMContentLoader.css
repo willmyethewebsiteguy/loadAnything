@@ -1,0 +1,36 @@
+/* =========
+  Load Content
+  A Simple Content Loader for Squarespace
+  This Code is Licensed by Will-Myers.com
+========== */
+
+/*BASE STYLES*/
+.wm-load-container .page-section{
+  padding:0 !important;
+  min-height: unset !important;
+}
+.wm-load-container .content-wrapper{
+  padding:0 !important;
+}
+.wm-load-container .content-wrapper > .content{
+  width:100% !important;
+}
+
+.wm-load-container [data-fluid-engine="true"]{
+  container-type: inline-size;
+}
+.wm-load-container .fluid-engine {
+  grid-template-columns: 0 repeat(24, minmax(0, var(--cell-max-width))) 0;
+}
+@media (max-width: 767px) {
+  .wm-load-container .fluid-engine {
+    grid-template-columns: 0 repeat(8, minmax(0, var(--cell-max-width))) 0;
+  }
+}
+
+/*Fluid Engine Blocks In Classic Editor*/
+.sqs-grid-12 .wm-load-container .fluid-engine .sqs-block{
+  padding: 0;
+}
+
+/*Classic Editor Blocks In Fluid Engine*/
